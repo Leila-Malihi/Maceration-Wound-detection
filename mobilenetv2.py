@@ -23,8 +23,7 @@ from sklearn.metrics import accuracy_score
 
 '''------------------------------------------------Dataset---------------------'''
 # Set paths to your image folders
-#data_path = '/net/projects/scratch/winter/valid_until_31_July_2024/lemalihi/lemalihi/ZIEL_labelstudio_data/new data for maceration-balance-500/full-splitted/'
-data_path = '/net/projects/scratch/winter/valid_until_31_July_2024/lemalihi/lemalihi/ZIEL_labelstudio_data/balance-500-wound types/maceration/maceration-cropped double-checked-splitted/'
+data_path = '...'
 train_data_dir = data_path + "train"
 validation_data_dir = data_path + "val"
 test_data_dir = data_path + "test"
