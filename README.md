@@ -1,25 +1,29 @@
 # Maceration-Wound-detection
-\documentclass{article}
-\usepackage{hyperref}
-\usepackage{graphicx}
+# MobileNetV2 Transfer Learning for Binary Image Classification
 
-\title{MobileNetV2 Transfer Learning for Binary Image Classification}
-\author{Your Name}
-\date{\today}
-
-\begin{document}
-
-\maketitle
-
-\section*{Overview}
 This repository contains code for training and evaluating a MobileNetV2 model using transfer learning for binary image classification. The model is trained on a dataset of cropped images of wounds categorized as either maceration or another type.
 
-\subsection*{Project Structure}
-\begin{itemize}
-    \item \textbf{Scripts}: Python scripts used for training (\texttt{train\_mobilenetv2.py}) and evaluating (\texttt{evaluate\_mobilenetv2.py}) the model.
-    \item \textbf{Data}: Dataset directory (\texttt{maceration-cropped double-checked-splitted/}) containing subdirectories for training, validation, and test data splits.
-    \item \textbf{Saved Models}: Directory (\texttt{saved\_models/}) where the best model checkpoint (\texttt{Mobilenetv2-best\_model.h5}) is saved during training.
-\end{itemize}
+## Project Structure
+
+- **Scripts**: Python scripts used for training (`train_mobilenetv2.py`) and evaluating (`evaluate_mobilenetv2.py`) the model.
+- **Data**: Dataset directory (`maceration-cropped double-checked-splitted/`) containing subdirectories for training, validation, and test data splits.
+- **Saved Models**: Directory (`saved_models/`) where the best model checkpoint (`Mobilenetv2-best_model.h5`) is saved during training.
+
+## Requirements
+
+- Python 3.x
+- TensorFlow 2.x
+- NumPy
+- Matplotlib
+- Scikit-learn
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/mobilenetv2-binary-classification.git
+   cd mobilenetv2-binary-classification
+
 
 \subsection*{Requirements}
 \begin{itemize}
