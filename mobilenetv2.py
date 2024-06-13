@@ -34,7 +34,7 @@ input_shape = (img_width, img_height, 3)
 
 # Batch size
 batch_size = 32
-epochs = 30
+epochs = 100
 
 '''------------------------------------------------Augmentation---------------------'''
 # Create ImageDataGenerator instances with data augmentation
