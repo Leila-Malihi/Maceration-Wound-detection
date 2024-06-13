@@ -161,4 +161,41 @@ accuracy = accuracy_score(y_test, y_pred_test)
 # Calculate loss manually
 loss_fn = tf.keras.losses.BinaryCrossentropy()
 loss = loss_fn(y_test, Y_pred).numpy()
+'''-----------------------------------------------------Save the results---------------------'''
+'''-text file'''
+# Save test loss and accuracy to a text file
+with open('test_results-Inception.txt', 'w') as f:
+    f.write(f'Test Loss Inception: {test_loss}\n')
+    f.write(f'Test Accuracy Inception: {test_acc}\n')
+    f.write(f'Test Loss manually: {loss}\n')
+    f.write(f'Test Accuracy manually: {accuracy }\n')
+    f.write(f'Precision: {precision}\n')
+    f.write(f'Recall: {recall}\n')
+    f.write(f'F1-score: {f1}\n')
+    f.write(f'Training Time: {training_time} seconds\n')
+    f.write(f'Validation Time: {validation_time} seconds\n')
 
+'''-confusion'''
+# Compute confusion matrix
+conf_matrix = confusion_matrix(y_test, y_pred_test)
+
+# Plot confusion matrix
+plt.figure(dpi=500)
+plt.imshow(conf_matrix, interpolation='nearest', cmap=plt.cm.Blues)
+plt.title('Confusion Matrix')
+plt.colorbar()
+tick_marks = np.arange(2)
+plt.xticks(tick_marks, ['Non-Macerated', 'Macerated'], rotation=45)
+plt.yticks(tick_marks, ['Non-Macerated', 'Macerated'])
+
+# Print confusion matrix values on plot
+thresh = conf_matrix.max() / 2.
+for i, j in itertools.product(range(conf_matrix.shape[0]), range(conf_matrix.shape[1])):
+    plt.text(j, i, format(conf_matrix[i, j], 'd'),
+             horizontalalignment="center",
+             color="white" if conf_matrix[i, j] > thresh else "black")
+
+plt.tight_layout()
+plt.ylabel('True label')
+plt.xlabel('Predicted label')
+plt.savefig('confusion_matrix-mobilenetv2.png')
