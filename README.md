@@ -5,8 +5,7 @@ This repository contains code for training and evaluating a MobileNetV2 model us
 
 ## Project Structure
 
-- **Scripts**: Python scripts used for training (`train_mobilenetv2.py`) and evaluating (`evaluate_mobilenetv2.py`) the model.
-- **Data**: Dataset directory (`maceration-cropped double-checked-splitted/`) containing subdirectories for training, validation, and test data splits.
+- **Data**: Put your own dataset and change the path.
 - **Saved Models**: Directory (`saved_models/`) where the best model checkpoint (`Mobilenetv2-best_model.h5`) is saved during training.
 
 ## Requirements
